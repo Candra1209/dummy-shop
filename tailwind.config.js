@@ -5,7 +5,19 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        anton :'Anton',
+        quicksand : 'Quicksand',
+        cabin : 'Cabin'
+      },
+      colors : {
+        utama : '#FFFCEF',
+        kedua : '#D2EBCD',
+        ketiga : '#FF7F5B',
+        keempat : '#393939',
+      }
+    },
   },
   plugins: [],
 }
