@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, useParams } from 'react-router-dom'
 import Hero from './component/Hero'
 import './index.css'
 import Root from './pages/Root'
@@ -8,23 +8,24 @@ import ErrorPage from './pages/ErrorPage'
 import ListPorduct from './component/ListPorduct'
 import Item from './pages/Item'
 
+
 const storeRouter = createBrowserRouter(
   [
     {
-      path : '/dummy-shop/',
+      path : '/dummy-shop',
       element : <Root/>,
       errorElement : <ErrorPage/>,
       children:[
         {
-          path : '/dummy-shop/',
+          path : '/dummy-shop',
           element : <Hero/>,
         },
         {
-          path : '/dummy-shop/products',
+          path : '/dummy-shop/product',
           element : <ListPorduct/>,
         },
         {
-          path : '/dummy-shop/product',
+          path : '/dummy-shop/product/:id',
           element : <Item/>,
         }
       ]

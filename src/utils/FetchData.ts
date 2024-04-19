@@ -1,19 +1,17 @@
 import axios from "axios";
+import { Product } from "../model/ProductModel";
 
 export async function FetchData(url : string){
     
-    var data;
+    let data: Product;
     
-    await axios.get(url)
-    .then((res) => {
-        data = res.data
-    })
-    .catch((error) => {
-        return error
-    })
-    .finally(() => {
-        console.log("Method done!!")
-    })
-
-    return data
+    try {
+        const response = await axios.get(url)
+        data = response.data
+        return data
+    } catch (error) {
+        alert(`Error saat Fatching : ${error}`)
+    } finally {
+        console.log("Fatching Done")
+    }
 }

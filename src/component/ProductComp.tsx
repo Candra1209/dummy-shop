@@ -10,7 +10,7 @@ interface propProductComp {
 
 function ProductComp({id_product, nama_product, kategori_product, harga_product, gmbr_product}: propProductComp ) {
     return (
-        <Link to={`/dummy-shop/product?id=${id_product}`}>
+        <Link to={`/dummy-shop/product/${id_product}`}>
             <div className="
             flex flex-col
             min-w-[250px] max-w-[350px] h-auto
