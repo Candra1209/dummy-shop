@@ -5,8 +5,8 @@ import Hero from './component/Hero'
 import './index.css'
 import Root from './pages/Root'
 import ErrorPage from './pages/ErrorPage'
-import ListPorduct from './component/ListPorduct'
 import Item from './pages/Item'
+import ProductPage from './pages/ProductPage'
 
 
 const storeRouter = createBrowserRouter(
@@ -22,7 +22,7 @@ const storeRouter = createBrowserRouter(
         },
         {
           path : '/dummy-shop/product',
-          element : <ListPorduct/>,
+          element : <ProductPage/>,
         },
         {
           path : '/dummy-shop/product/:id',

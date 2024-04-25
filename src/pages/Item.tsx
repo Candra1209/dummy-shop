@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { FetchData } from "../utils/FetchData";
 import { Product } from "../model/ProductModel";
 import Breadcrumbs from "../component/Breadcrumbs";
+import { BackButton } from "../component/BackButton";
 
 
 
@@ -37,7 +38,8 @@ function Item() {
     return (
         <div>
 
-            <div className="px-5 py-1">
+            <div className="px-5 py-1 flex items-center gap-5">
+                <BackButton/>
                 <Breadcrumbs/>
             </div>
 

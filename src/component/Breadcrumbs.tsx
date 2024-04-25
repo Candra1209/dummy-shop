@@ -1,20 +1,29 @@
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 function Breadcrumbs() {
     const location = useLocation();
     let page: String[] = location.pathname.split("/");
+
+    let path: string = "";
     page = page.filter((bread) => bread != "")
     
 
+
     return (
-        <div className="text-sm breadcrumbs">
+        <div className="font-quicksand text-lg breadcrumbs">
             <ul>
                 {page.map((bread, i) => {
-                    return(
+                    
+                    path = path + "/" + bread
+                    
+                    return( 
                         
                         <li key={i}>
-                            {bread}
+                            <Link to={path} className="hover:text-ketiga">
+                                {bread}
+                            </Link>
                         </li>
+                        
                         
                     )
                 })}
